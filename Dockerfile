@@ -30,4 +30,5 @@ RUN apt-get update && \
 
 VOLUME ["/config"]
 COPY service-start.sh /dockerstartup/service-start.sh
+RUN chmod a+x /dockerstartup/service-start.sh
 ENTRYPOINT ["/dockerstartup/service-start.sh"]
